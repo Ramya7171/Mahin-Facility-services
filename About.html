@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- normal css -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- animation  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+
+    <!-- Tailwind css -->
+    <script src="Tailwind css.js"></script>
+
+    <nav>
+        <div class="2xl:container mx-auto bg-white">
+            <div class="w-[90%] mx-auto">
+                <div class="flex justify-between ">
+                    <div class="">
+                        <img class="w-60" src="Assets/Mahin Facility Services pvt ltd.png" alt="Malar clean green">
+                    </div>
+                    <!--  item-center md:flex-row  md:justify-center sm:hidden -->
+                    <div class=" items-center mt-20" id="menubar">
+                        <ul class=" flex gap-10 mr-15 items-center  mt-30 md:justify-center text-xl " id="menuList">
+                            <li class="hover:text-white  font-bold  cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="Index.html">Home </a></li>
+                             <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="About.html">About</a></li>
+                                    <!-- <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                        href="Our_company.html">Our other Companies</a></li>
+          -->
+                            <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="Services.html"> Our Services</a>
+                            </li>
+                            <!-- <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="Gallery.html">Gallery</a>
+                            </li> -->
+                            <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="Contact.html">Contact Us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="menu-icon md:hidden mt-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            id="menu" class="lucide lucide-align-justify " onclick="toggleMenu()">
+                            <path d="M3 12h18" />
+                            <path d="M3 18h18" />
+                            <path d="M3 6h18" />
+                        </svg>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="cross"
+                        class="lucide lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px ";
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight = "0px ") {
+                menuList.style.maxHeight = "500px ";
+            }
+            else {
+                menuList.style.maxHeight = "0px ";
+            }
+
+        }
+    </script>
+
+
+<div class="2xl:container mx-auto">
+    <h1 class="text-center text-blue-900 text-4xl font-bold animate__animated animate__backInLeft animate__delay-0.5s">MALAR GROUPS</h1>
+    <h1 class="text-4xl  text-center text-blue-900 p-10 font-bold animate__animated animate__backInLeft animate__delay-0.5s">MAHIN FACILITY SERVICES <span class="text-orange-400 ">PRIVATE LIMITED
+        </span>
+    </h1>
+    
+</div>
+
+
+    <!--About first section  -->
+
+    <div class="2xl:container mx-auto ">
+        <div class="w-[90%] mx-auto">
+
+            <h1 class="text-4xl text-center text-orange-500 font-bold">About Us</h1>
+            <div class=" mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- dad imag -->
+                <div class="flex gap-10">
+                
+                    <div>
+                        <p class="font-bold text-2xl">K.Selva Murugan</p>
+                        <p class="text-gray-800">Founder &Chairman</p>
+                    </div>
+
+                </div>
+
+                <!--  sir image -->
+                <div class="flex gap-10">
+                    
+                    <div>
+                        <p class="font-bold text-2xl">S.Manoj Kumar</p>
+                        <p class="text-gray-800">Managing Director.</p>
+                    </div>
+                </div>
+                <!--  image -->
+                <div class="flex gap-10">
+                    <div class="">
+                        <p class="font-bold text-2xl">S.Selva Gokul</p>
+                        <p class="text-gray-800">Managing Director</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- about sec section -->
+    <div class="2xl:container mx-auto mt-10 p-20 about-sec">
+
+        <div class="w-[90%] mx-auto ">
+            <div class="lg:text-2xl sm:text-xl">
+                <span class="font-bold "><span  class="px-3 py-2  rounded-full bg-orange-500 text-white">✔</span>MAHIN FACILITY SERVICES PVT LTD</span> was  old Private company incorporated with MCA on 22nd January, 2024. we believe that the right talent can transform businesses.
+                As a leading manpower agency, our mission is to bridge the gap between top-tier professionals and
+                organizations seeking to grow and innovate. We specialize in providing tailored staffing solutions that
+                drive success across various industries.
+                <p class="mt-5"><span  class="px-3 py-2  rounded-full bg-orange-500 text-white">✔</span>To deliver exceptional manpower solutions that meet the unique needs of each client.
+
+                </p>
+                <p class="mt-5"><span  class="px-3 py-2  rounded-full bg-orange-500 text-white">✔</span>To build long-term relationships based on trust, transparency, and mutual growth.
+                </p>
+
+                <h1 class="font-bold lg:text-3xl sm:text-2xl text-center p-10">Why Choose Us?
+                </h1>        
+                <div class="mt-5">
+                  <p> <span  class="px-3 py-2  rounded-full bg-orange-500 text-white">✔</span>  <b> Personalized Service:</b> We take the time to understand your business needs and provide customized
+                    staffing solutions.</p>
+    
+                  <p class="mt-5"> <span  class="px-3 py-2  rounded-full bg-orange-500 text-white">✔</span>  <b>Expert Team:</b> Our recruitment specialists bring years of industry experience and insights to every
+                       placement.</p>
+    
+                    <p class="mt-5"> <span  class="px-3 py-2  rounded-full bg-orange-500 text-white">✔</span> <b>Commitment to Quality:</b> We uphold the highest standards in our recruitment process,
+                            ensuring reliable and efficient service for both our clients and candidates.</p>
+    
+    
+                </div>
+    
+            </div>
+
+        </div>
+    </div>
+
+<!-- fooder -->
+
+   <footer class="mt-10 bg-orange-400">
+    <div class="2xl:container mx-auto footer-container ">
+        <div class="w-[90%] mx-auto grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3">
+            <div class="footer-section ">
+                <h3 class="text-5xl font-bold text-black">Address</h3>
+                <div class="flex gap-3">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-map-pin text-black">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 
+                            1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <div class="text-black text-3xl">
+                        <p> 23A ,Bus Stand Road ,
+                        
+                        </p>
+                        
+                        <p>Aruppukottai-626101
+                            <br>Virudhunagar (Dis)
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section ">
+                <h3 class="text-4xl font-bold text-black">Mail Us</h3>
+
+                <div class="flex gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-mail text-black">
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    <p class="text-black">mahinfacilityservices@gmail.com</p>
+                </div>
+                <!-- <div class="flex gap-3 mt-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-mail">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        <p> manojkumar.malar@gmail.com</p>
+                    </div> -->
+            </div>
+            <div class="footer-section">
+                <h3 class="text-3xl font-bold text-black">Contact Info</h3>
+                <div class="flex gap-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone-call text-black">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                        <path d="M14.05 6A5 5 0 0 1 18 10" />
+                    </svg>
+                    <p class="text-black"> +91 95008 81524</p>
+                </div>
+
+                <div class="flex gap-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone-call text-black">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                        <path d="M14.05 6A5 5 0 0 1 18 10" />
+                    </svg>
+                    <p class="text-black"> +91 78451 93965</p>
+                </div>
+
+                <div class="flex gap-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone-call text-black">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                        <path d="M14.05 6A5 5 0 0 1 18 10" />
+                    </svg>
+                    <p class="text-black"> +91 83005 45185</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</footer>
+
+</body>
+
+</html>

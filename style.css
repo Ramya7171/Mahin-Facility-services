@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Menu section */
+@media (max-width:640px) {
+    nav ul {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        overflow: hidden;
+        background-color: #4c1d95;
+        color: white;
+
+    }
+
+    #menuList {
+        transition: all 0.5s;
+    }
+
+    nav ul :hover {
+        color: #f4900a;
+        cursor: pointer;
+    }
+}
+.about {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(252, 212, 155, 1) 90%);
+}
+ 
+/* footer */
+footer {
+
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.footer-section i {
+    margin-right: 8px;
+    color: #fff200;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+
+/* about sec */
+
+ .about-sec {
+    background: rgb(248, 246, 247);
+    background: radial-gradient(circle, rgba(248, 246, 247, 1) 0%, rgba(148, 187, 233, 1) 100%);
+} 

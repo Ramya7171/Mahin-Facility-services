@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+
+    <!-- normal css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind css -->
+    <script src="Tailwind css.js"></script>
+
+<!-- animation  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+
+
+    <!--    nav section -->
+    <nav>
+        <div class="2xl:container mx-auto bg-white">
+            <div class="w-[90%] mx-auto">
+                <div class="flex justify-between ">
+                    <div class="">
+                        <img class="w-60" src="Assets/Mahin Facility Services pvt ltd.png" alt="Malar clean green">
+                    </div>
+                    <!--  item-center md:flex-row  md:justify-center sm:hidden -->
+                    <div class=" items-center mt-20" id="menubar">
+                        <ul class=" flex gap-10 mr-15 items-center  mt-30 md:justify-center text-xl " id="menuList">
+                            <li class="hover:text-white  font-bold  cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="Index.html">Home </a></li>
+                            <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="About.html">About</a></li>
+                            <!-- <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="Our_company.html">Our other Companies</a></li> -->
+
+                            <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="Services.html">Our Services</a>
+                            </li>
+                            
+                            <li class="hover:text-white  font-bold cursor-pointer hover:bg-violet-900 px-3 py-1"><a
+                                    href="Contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-icon md:hidden mt-20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            id="menu" class="lucide lucide-align-justify " onclick="toggleMenu()">
+                            <path d="M3 12h18" />
+                            <path d="M3 18h18" />
+                            <path d="M3 6h18" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px ";
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight = "0px ") {
+                menuList.style.maxHeight = "500px ";
+            }
+            else {
+                menuList.style.maxHeight = "0px ";
+            }
+
+        }
+    </script>
+
+
+    <!-- image -->
+    <!-- <div class="2xl:container mx-auto bg-blue-100">
+        <div class="h-55">
+            <img src="Assets/Services.png" alt="MCG Cleaning Services">
+        </div>
+
+    </div> -->
+
+
+
+    <!--  our services section -->
+
+    <div class="2xl:container mx-auto mt-35 ">
+        <h1 class="text-center text-blue-900 text-4xl font-bold animate__animated animate__backInLeft animate__delay-0.5s">MALAR GROUPS</h1>
+
+        <h1 class="lg:text-4xl sm:text-2xl text-center text-blue-900 p-5 font-bold animate__animated animate__backInLeft animate__delay-0.5s">MAHIN FACILITY SERVICES.
+             <span
+                class="text-orange-400 "> 
+                 PRIVATE LIMITED</span></h1>
+        <p skilled class="text-center text-gray-500 px-10 text-sm">Let us use our years of experience, skilled
+            employees,
+            and advanced
+            procedures to ensure a clean and</br>
+            healthy environment for your employees, customers and guests.
+
+        </P>
+        <p class="text-center  text-gray-500">24*7 Support & Services</p>
+
+
+        <div class=" w-[90%] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10  mt-20">
+            <a href="Cleaning/House_cleaning.html" target="_blank">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 hover:text-orange-900 ">
+                    <img src="Assets/full house cl.jpg" alt="house image" class="rounded-2xl">
+                    <p class="text-md leading-[26px]  text-black font-bold">Full House Cleaning</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-house-icon lucide-house text-blue-700">
+                        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                        <path
+                            d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    </svg>
+
+                </div>
+            </a>
+            <a href="Cleaning/Residential _Commercial.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+
+                    <img src="Assets/commercial cleaning.jpg" alt="cleaning">
+                    <p class="text-md leading-[20px]  text-black font-bold ">Residential & Commercial </p>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-handshake-icon lucide-handshake text-blue-700">
+                        <path d="m11 17 2 2a1 1 0 1 0 3-3" />
+                        <path
+                            d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+                        <path d="m21 3 1 11h-2" />
+                        <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
+                        <path d="M3 4h8" />
+                    </svg>
+
+                </div>
+            </a>
+
+
+            <a href="Cleaning/Lodge Cleaning.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200  ">
+                    <img src="Assets/Lodge cleaning.jpg" alt="Lodge cleaning" class="rounded-2xl">
+                    <p class=" text-md leading-12 text-black font-bold">Lodge Cleaning & Maintaining
+                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-castle-icon lucide-castle text-blue-700">
+                        <path d="M22 20v-9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z" />
+                        <path d="M18 11V4H6v7" />
+                        <path d="M15 22v-4a3 3 0 0 0-3-3a3 3 0 0 0-3 3v4" />
+                        <path d="M22 11V9" />
+                        <path d="M2 11V9" />
+                        <path d="M6 4V2" />
+                        <path d="M18 4V2" />
+                        <path d="M10 4V2" />
+                        <path d="M14 4V2" />
+                    </svg>
+
+                </div>
+            </a>
+            <a href="Cleaning/Hopital Cleaning.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+                    <img src="Assets/Hospital cleaning.jpg" alt="Hospital cleaning" class="rounded-2xl">
+                    <p class="text-md leading-12  text-black font-bold">Hospital Cleaning & Maintaining</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-hospital-icon lucide-hospital text-blue-700">
+                        <path d="M12 6v4" />
+                        <path d="M14 14h-4" />
+                        <path d="M14 18h-4" />
+                        <path d="M14 8h-4" />
+                        <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" />
+                        <path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18" />
+                    </svg>
+
+
+                </div>
+            </a>
+        </div>
+
+        <div class=" w-[90%] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 mt-10 ">
+            <a href="Cleaning/Scl_clg Cleaning.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+                    <img src="Assets/scl & clg cleaning.jpg" alt="cleaning" class="rounded-2xl">
+                    <p class="text-md leading-12  text-black font-bold">School & Colleges Cleaning</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-school-icon lucide-school text-blue-700">
+                        <path d="M14 22v-4a2 2 0 1 0-4 0v4" />
+                        <path
+                            d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10" />
+                        <path d="M18 5v17" />
+                        <path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6" />
+                        <path d="M6 5v17" />
+                        <circle cx="12" cy="9" r="2" />
+                    </svg>
+
+
+                </div>
+            </a>
+            <a href="Cleaning/Garden Cleaning.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+                    <img src="Assets/Garden Maintenance.jpg" alt="cleaning" class="rounded-2xl">
+                    <p class="text-md leading-12 text-black font-bold mt-7">Garden Cleaning</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-fence-icon lucide-fence text-blue-700">
+                        <path d="M4 3 2 5v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" />
+                        <path d="M6 8h4" />
+                        <path d="M6 18h4" />
+                        <path d="m12 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" />
+                        <path d="M14 8h4" />
+                        <path d="M14 18h4" />
+                        <path d="m20 3-2 2v15c0 .6.4 1 1 1h2c.6 0 1-.4 1-1V5Z" />
+                    </svg>
+
+                </div>
+            </a>
+
+
+            <a href="Cleaning/Security cleaning.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+                    <img src="Assets/security services.jpg" alt="Security" class="rounded-2xl">
+                    <p class="text-md leading-12  text-black font-bold">Security Services</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-shield-user-icon lucide-shield-user text-blue-700">
+                        <path
+                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        <path d="M6.376 18.91a6 6 0 0 1 11.249.003" />
+                        <circle cx="12" cy="11" r="4" />
+                    </svg>
+
+
+                </div>
+            </a>
+
+
+
+            <a href="Cleaning/Textile Cleaning.html">
+                <div
+                    class="flex flex-col items-center shadow-lg  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110   hover:bg-orange-200 ">
+                    <img src="Assets/Textile  cleaning.jpg" alt="cleaning" class="rounded-2xl">
+                    <p class="text-md leading-12 text-black font-bold mt-7">Textile Stores Cleaning </p>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-swatch-book-icon lucide-swatch-book text-blue-700 ">
+                        <path d="M11 17a4 4 0 0 1-8 0V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2Z" />
+                        <path d="M16.7 13H19a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7" />
+                        <path d="M 7 17h.01" />
+                        <path d="m11 8 2.3-2.3a2.4 2.4 0 0 1 3.404.004L18.6 7.6a2.4 2.4 0 0 1 .026 3.434L9.9 19.8" />
+                    </svg>
+
+                </div>
+            </a>
+        </div>
+        <div class=" w-[90%] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10 mt-10 ">
+
+
+            <a href="Cleaning/Hotel cleaning.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+                    <img src="Assets/Hotel Cleaning.jpg" alt="Cleaning" class="rounded-2xl">
+                    <p class=" text-md leading-[26px] text-black font-bold">Hotel,Hospital,Lodge Skilled Labours
+                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-hotel-icon lucide-hotel text-blue-700">
+                        <path d="M10 22v-6.57" />
+                        <path d="M12 11h.01" />
+                        <path d="M12 7h.01" />
+                        <path d="M14 15.43V22" />
+                        <path d="M15 16a5 5 0 0 0-6 0" />
+                        <path d="M16 11h.01" />
+                        <path d="M16 7h.01" />
+                        <path d="M8 11h.01" />
+                        <path d="M8 7h.01" />
+                        <rect x="4" y="2" width="16" height="20" rx="2" />
+                    </svg>
+                </div>
+            </a>
+            <a href="Cleaning/Industry skilled.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+                    <img src="Assets/Industry skilled.jpg" alt="cleaning">
+                    <p class=" text-md leading-12 text-black font-bold">All Industry Skilled ,Unskilled workers
+                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-users-icon lucide-users text-blue-700">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+            </a>
+
+            <a href="Cleaning/Restroom Cleaning.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+                    <img src="Assets/Restroom cleaning.jpg" alt="Cleaning" class="h-15 rounded-2xl" class="rounded-2xl">
+                    <p class="text-md leading-12 text-black font-bold">Restroom Cleaning </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-toilet-icon lucide-toilet text-blue-700">
+                        <path
+                            d="M7 12h13a1 1 0 0 1 1 1 5 5 0 0 1-5 5h-.598a.5.5 0 0 0-.424.765l1.544 2.47a.5.5 0 0 1-.424.765H5.402a.5.5 0 0 1-.424-.765L7 18" />
+                        <path d="M8 18a5 5 0 0 1-5-5V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8" />
+                    </svg>
+
+
+                </div>
+            </a>
+
+            <a href="Cleaning/Health care.html">
+                <div
+                    class="flex flex-col items-center  p-5 rounded-2xl gap-3 hover:transition-all duration-500 hover:scale-110 shadow-lg  hover:bg-orange-200 ">
+                    <img src="Assets/Health care.jpg" alt="Health" class="rounded-2xl">
+                    <p class="text-md leading-12 text-black font-bold">Cooking ,Health Care ,Masters Drivers</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-heart-pulse-icon lucide-heart-pulse text-blue-700">
+                        <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
+                    </svg>
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+  <footer class="mt-10 bg-orange-400">
+    <div class="2xl:container mx-auto footer-container ">
+        <div class="w-[90%] mx-auto grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3">
+            <div class="footer-section ">
+                <h3 class="text-5xl font-bold text-black">Address</h3>
+                <div class="flex gap-3">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-map-pin text-black">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 
+                            1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
+                    <div class="text-black text-3xl">
+                        <p> 23A ,Bus Stand Road ,
+                        
+                        </p>
+                        
+                        <p>Aruppukottai-626101
+                            <br>Virudhunagar (Dis)
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section ">
+                <h3 class="text-4xl font-bold text-black">Mail Us</h3>
+
+                <div class="flex gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-mail text-black">
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    <p class="text-black">mahinfacilityservices@gmail.com</p>
+                </div>
+                <!-- <div class="flex gap-3 mt-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-mail">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        <p> manojkumar.malar@gmail.com</p>
+                    </div> -->
+            </div>
+             <div class="footer-section">
+                <h3 class="text-3xl font-bold text-black">Contact Info</h3>
+                <div class="flex gap-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone-call text-black">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                        <path d="M14.05 6A5 5 0 0 1 18 10" />
+                    </svg>
+                    <p class="text-black"> +91 95008 81524</p>
+                </div>
+
+                <div class="flex gap-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone-call text-black">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                        <path d="M14.05 6A5 5 0 0 1 18 10" />
+                    </svg>
+                    <p class="text-black"> +91 78451 93965</p>
+                </div>
+
+                <div class="flex gap-3 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone-call text-black">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                        <path d="M14.05 6A5 5 0 0 1 18 10" />
+                    </svg>
+                    <p class="text-black"> +91 83005 45185</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
