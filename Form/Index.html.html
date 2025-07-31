@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="icon" type="MCG SERVICES" href="../Assets/Malar clean green.jpg" />
+    <title>Mahin Facility Services Application</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #f6f8fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+            padding: 32px 36px 24px 36px;
+            background-image: url(Untitled\ design.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            background: #e3e7ed;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #2d3a4a;
+            margin-bottom: 8px;
+        }
+
+        .appno {
+            font-size: 1em;
+            color: #000000;
+            /* margin-top: 4px; */
+        }
+
+        .center-title {
+            flex: 1;
+            width: 10%;
+            text-align: center;
+        }
+
+        .right-info {
+            text-align: right;
+            min-width: 180px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-end;
+        }
+
+        .right-info label {
+            font-size: 0.98em;
+            color: #444;
+            font-weight: 500;
+        }
+
+        .right-info input[type="date"],
+        .right-info input[type="text"] {
+            width: 120px;
+            padding: 4px 6px;
+            margin-bottom: 7px;
+            border: 1px solid #cfd8dc;
+            border-radius: 4px;
+            font-size: 0.97em;
+        }
+
+        .photo-upload-btn {
+            margin-top: 4px;
+            margin-left: 206px;
+            padding: 4px 12px;
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.97em;
+            transition: background 0.2s;
+            margin-left: 570px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .photo-upload-btn:hover {
+            background: #125ea7;
+        }
+
+        .photo-preview {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #b0bec5;
+            border-radius: 6px;
+            object-fit: cover;
+            background: #f1f1f1;
+            display: block;
+            margin-top: 4px;
+            margin-bottom: 6px;
+            margin-left: 570px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 18px 0 24px 0;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            gap: 16px;
+        }
+
+        .form-row label {
+            width: 170px;
+            font-size: 1em;
+            color: #000000;
+            font-weight: 500;
+            /* text-align: left; */
+        }
+
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row input[type="number"],
+        .form-row select {
+            /* flex: 1; */
+            padding: 7px 10px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            font-size: 1em;
+            background: #f9f9fb;
+            transition: border 0.2s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .form-row input[type="text"]:focus,
+        .form-row input[type="email"]:focus,
+        .form-row input[type="number"]:focus,
+        .form-row select:focus {
+            border: 1.5px solid #1976d2;
+            outline: none;
+            background: #fff;
+        }
+
+        .error {
+            color: #d32f2f;
+            font-size: 0.93em;
+            margin-left: 12px;
+            min-width: 120px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 28px;
+            font-family: 'Times New Roman', Times, serif 1;
+        }
+
+        .actions button {
+            padding: 8px 18px;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            background: #1976d2;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: 'Times New Roman', Times, serif 1;
+        }
+
+        .actions button:hover {
+            background: #125ea7;
+        }
+
+        .actions button[disabled] {
+            background: #b0bec5;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 16px 6vw;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .center-title {
+                margin: 12px 0;
+            }
+
+            .form-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+            }
+
+            .form-row label {
+                width: 100%;
+                margin-bottom: 4px;
+                text-align: left;
+            }
+
+            .error {
+                margin-left: 0;
+            }
+
+            .right-info {
+                text-align: left;
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+
+        @media print {
+
+            body,
+            html {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #fff !important;
+            }
+
+            .container {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                box-shadow: none !important;
+            }
+        }
+
+        /* .page-break {
+            page-break-before: always;
+        } */
+    </style>
+    <!-- Add this in <head> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+</head>
+
+<body>
+    <form id="applicationForm" method="post"
+        action="https://script.google.com/macros/s/AKfycbzKs-I3XqMwv6_H1vPueq02vEmoWk_bY9HkkFZwTMd1nv56zerTIk1TIsNxw9Oo90A_/exec"
+        autocomplete="off">
+        <div class="container">
+            <div class="header">
+                <div>
+                    <img src="Mahin Facility Services pvt ltd re.png" alt="Logo"
+                        style="width: 140px; height: 140px; object-fit: contain;">
+                </div>
+                <div class="center-title ">
+                    <img src="Mahin Facility Services pvt ltd.png" alt=""
+                        style="width: 80%; margin-top: 40px; margin-left: 70px; ">
+                    <p
+                        style=" margin-left: 50px; margin-top: 0px; text-align: center; font-size:large; color: #0601a0;">
+                        23A, Bus Stand Road,<br>
+                        <span> Aruppukkottai-626101, Virudhunagar (Dit).<br></span>
+                    </p>
+                </div>
+            </div>
+            <div class="right-info" style="display: flex;justify-content: center; align-items: center; ">
+                <div style="display: flex;">
+                    <label for="date"
+                        style="font-weight: bold; color: #000000; margin-top: 3px; margin-right: 10px;">Date:</label>
+                    <!-- <p id="currentDate" style="margin-right: 30px;"></p> -->
+                    <input type="date" id="date" name="date" style="margin-right: 20px;" required>
+                </div>
+                <div>
+                    <label for="location" style="font-weight: bold; color: #000000;">Location:</label>
+                    <input type="text" id="location" name="location">
+                </div>
+                <div class="appno" style="margin-left: 0px; margin-bottom: 5px; font-size: larger; font-weight: bold;">
+                    App No: <span id="AppNo"
+                        style="border:1px solid rgb(119, 119, 119); border-radius:3px; padding-left: 25px; padding-right: 25px; padding-top: 3px; padding-bottom:3px ;">1</span>
+                
+
+                </div>
+            </div>
+            <hr style="height:1px; border-width:0; background-color: #333; ">
+            <div>
+                <input type="file" id="photo" accept="image/*" style="display:none" onchange="previewPhoto(event)">
+                <img id="photoPreview" class="photo-preview" src="" alt="Photo">
+                <button type="button" class="photo-upload-btn" onclick="document.getElementById('photo').click()">Upload
+                    Photo</button>
+            </div>
+            <div class="form-row" style="margin-top:-100px;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-row">
+                <label for="fatherName">Father/Mother Name:</label>
+                <input type="text" id="fatherName" name="fatherName">
+                <span class="error" id="fatherNameError"></span>
+            </div>
+            <div class="form-row">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+                <span class="error" id="addressError"></span>
+            </div>
+            <div class="form-row">
+                <label for="mobile">Mobile No:</label>
+                <input type="text" id="mobile" name="mobile">
+                <span class="error" id="mobileError"></span>
+            </div>
+            <div class="form-row">
+                <label for="gmail">Gmail ID:</label>
+                <input type="email" id="gmail" name="gmail">
+                <span class="error" id="gmailError"></span>
+            </div>
+            <div class="form-row">
+                <label for="aadhar">Aadhar No:</label>
+                <input type="text" id="aadhar" name="aadhar">
+                <span class="error" id="aadharError"></span>
+            </div>
+            <div class="form-row">
+                <label for="pan">PAN No:</label>
+                <input type="text" id="pan" name="pan">
+                <span class="error" id="panError"></span>
+                <!-- pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$" maxlength="10" -->
+            </div>
+            <div class="form-row">
+                <label for="bankAccountNo">Bank Account No:</label>
+                <input type="text" id="bankAccountNo" name="bankAccountNo">
+                <span class="error" id="accountError"></span>
+            </div>
+            <div class="form-row">
+                <label for="ifsc">IFSC Code:</label>
+                <input type="text" id="ifsc" name="ifsc">
+                <span class="error" id="ifscError"></span>
+            </div>
+            <div class="form-row">
+                <label for="education">Education:</label>
+                <select id="education" name="education">
+                    <option value="">Select</option>
+                    <option value="10">10</option>
+                    <option value="+2">+2</option>
+                    <option value="Graduation">Graduation</option>
+                    <option value="Post Graduation">Post Graduation</option>
+                </select>
+                <span class="error" id="educationError"></span>
+            </div>
+            <div class="form-row">
+                <label for="experience">Experience:</label>
+                <input type="text" id="experience" name="experience">
+                <span class="error" id="experienceError"></span>
+            </div>
+            <div class="form-row">
+                <label for="applyJob">Apply For Job:</label>
+                <select id="applyJob" name="applyJob">
+                    <option value="">Select</option>
+                    <option>Supervisor</option>
+                    <option>Captain</option>
+                    <option>Cashier</option>
+                    <option>Waiter</option>
+                    <option>Food master</option>
+                    <option>Chat master</option>
+                    <option>Dishwash</option>
+                    <option>Kitchen assistant</option>
+                    <option>Sales man</option>
+                    <option>House keeping</option>
+                    <option>Stall man</option>
+                    <option>Security</option>
+                    <option>Load man</option>
+                </select>
+                <span class="error" id="applyJobError"></span>
+            </div>
+            <!-- <div class="form-row">
+                <label for="searchAppNo">Show Previous Data (App No):</label>
+                <input type="number" id="searchAppNo" min="1" style="width:80px;">
+                <button type="button" onclick="showPreviousData()">Show</button>
+            </div> -->
+            <div class="actions">
+                <!-- <button type="button" onclick="downloadPDF()">Download PDF</button> -->
+                <!-- <button type="button" onclick="downloadAll()">Download All</button> -->
+                <button type="submit">Submit</button>
+                <!-- <button type="button" onclick="printPage()">Print</button> -->
+            </div>
+        </div>
+    </form>
+
+    <!-- data save pdf -->
+    <!-- SheetJS for Excel export -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> -->
+    <script>
+        
+
+        // Auto-increment Application No (for display only)
+        // let AppNo = 1;
+        // if (localStorage.getItem('AppNo3')) {
+        //     AppNo = parseInt(localStorage.getItem('AppNo3'), 10);
+        // }
+        // document.getElementById('AppNo').innerText = AppNo;
+        // Increment AppNo on form submission
+        // document.getElementById('applicationForm').addEventListener('submit', function () {
+        //     AppNo++;
+        //     localStorage.setItem('AppNo3', AppNo);
+        //     document.getElementById('AppNo').innerText = AppNo;
+        // });
+
+
+
+        // Important
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzKs-I3XqMwv6_H1vPueq02vEmoWk_bY9HkkFZwTMd1nv56zerTIk1TIsNxw9Oo90A_/exec'; // Replace with your deployed Apps Script URL
+        const form = document.getElementById('applicationForm');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            alert("Form submitted! Please wait...");
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => {
+                    alert("Form submitted successfully!");
+                    document.getElementById('submitMessage').style.color = 'green';
+                    document.getElementById('submitMessage').innerText = "Form submitted successfully!";
+                    // Optionally, show another alert or just reset the form
+                    form.reset();
+                })
+                .catch(error => alert("Error! " + error.message));
+        });
+
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("currentDate").innerText = today.toLocaleDateString('en-US', options);
+
+        function previewPhoto(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById('photoPreview');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+
+        // Auto-increment Application No (for display only)
+        let AppNo = 1;
+        if (localStorage.getItem('AppNo3')) {
+            AppNo = parseInt(localStorage.getItem('AppNo3'), 10);
+        }
+        document.getElementById('AppNo').innerText = AppNo;
+        document.getElementById('AppNo').innerText = AppNo;
+        // Increment AppNo on form submission
+         document.getElementById('applicationForm').addEventListener('submit', function () {
+            AppNo++;
+            localStorage.setItem('AppNo3', AppNo);
+            document.getElementById('AppNo').innerText = AppNo;
+         });
+
+        // Photo preview and base64 storage
+        let photoBase64 = "";
+        function previewPhoto(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById('photoPreview');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                    photoBase64 = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Show previous data by App No (Google Sheets)
+        // async function showPreviousData() {
+
+
+        // PDF: Always one page
+        function downloadPDF() {
+            const element = document.querySelector('.container');
+            element.classList.add('pdf-scale');
+            const opt = {
+                margin: [0, 0, 0, 0],
+                filename: 'Application.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: [] }
+            };
+            html2pdf().set(opt).from(element).save().then(() => {
+                element.classList.remove('pdf-scale');
+            });
+        }
+
+        // Print page (for PDF)
+        function printPage() {
+            window.print();
+        }
+
+        // Google Sheets form submission
+        // const scriptURL = 'https://script.google.com/macros/s/AKfycbzKs-I3XqMwv6_H1vPueq02vEmoWk_bY9HkkFZwTMd1nv56zerTIk1TIsNxw9Oo90A_/exec';
+        // const form = document.getElementById('applicationForm');
+
+        // form.addEventListener('submit', e => {
+        //     e.preventDefault();
+        //     fetch(scriptURL, {
+        //         method: 'POST',
+        //         body: new FormData(form)
+        //     })
+        //         .then(response => {
+        //             alert("Form submitted successfully");
+        //             form.reset();
+        //             AppNo++;
+        //             localStorage.setItem('AppNo3', AppNo);
+        //             document.getElementById('AppNo').innerText = AppNo;
+        //             document.getElementById('photoPreview').src = '';
+        //             photoBase64 = "";
+        //         })
+        //         .catch(error => alert("Error! " + error.message));
+        // });
+    </script>
+</body>
+
+</html>
