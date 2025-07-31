@@ -255,6 +255,82 @@
         /* .page-break {
             page-break-before: always;
         } */
+
+        /* Loading Bar Styles */
+#loadingBar {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(255,255,255,0.7);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader-bg {
+    background: #fff;
+    padding: 32px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loader-bar {
+    width: 180px;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    position: relative;
+}
+.loader-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #1976d2 40%, #42a5f5 100%);
+    border-radius: 6px;
+    animation: loadingBarAnim 1.2s infinite;
+    position: absolute;
+    left: 0; top: 0;
+}
+@keyframes loadingBarAnim {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+.loader-text {
+    font-size: 1.1em;
+    color: #1976d2;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Message Box Styles */
+#messageBox {
+    position: fixed;
+    top: 30px; left: 50%; transform: translateX(-50%);
+    background: #fff;
+    color: #1976d2;
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    padding: 18px 32px;
+    font-size: 1.15em;
+    font-weight: 500;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    z-index: 10000;
+    display: none;
+    transition: opacity 0.3s;
+}
+#messageBox.success {
+    border-color: #43a047;
+    color: #43a047;
+}
+#messageBox.error {
+    border-color: #d32f2f;
+    color: #d32f2f;
+}
     </style>
     <!-- Add this in <head> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
@@ -401,6 +477,16 @@
         </div>
     </form>
 
+    <!-- Loading Bar -->
+<div id="loadingBar" style="display:none;">
+    <div class="loader-bg">
+        <div class="loader-bar"></div>
+        <span class="loader-text">Submitting, please wait...</span>
+    </div>
+</div>
+<!-- Message Box -->
+<div id="messageBox" style="display:none;"></div>
+
     <!-- data save pdf -->
     <!-- SheetJS for Excel export -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> -->
@@ -428,19 +514,28 @@
 
         form.addEventListener('submit', e => {
             e.preventDefault();
-            alert("Form submitted! Please wait...");
+            showLoadingBar(true);
+            showMessageBox('', false); // Hide message box
+
             fetch(scriptURL, {
                 method: 'POST',
                 body: new FormData(form)
             })
-                .then(response => {
-                    alert("Form submitted successfully!");
-                    document.getElementById('submitMessage').style.color = 'green';
-                    document.getElementById('submitMessage').innerText = "Form submitted successfully!";
-                    // Optionally, show another alert or just reset the form
-                    form.reset();
-                })
-                .catch(error => alert("Error! " + error.message));
+            .then(response => {
+                showLoadingBar(false);
+                showMessageBox('Form submitted successfully!', true, 'success');
+                form.reset();
+                // Increment AppNo only after successful submission
+                AppNo++;
+                localStorage.setItem('AppNo3', AppNo);
+                document.getElementById('AppNo').innerText = AppNo;
+                document.getElementById('photoPreview').src = '';
+                photoBase64 = "";
+            })
+            .catch(error => {
+                showLoadingBar(false);
+                showMessageBox('Error! ' + error.message, true, 'error');
+            });
         });
 
         const today = new Date();
@@ -538,6 +633,25 @@
         //         })
         //         .catch(error => alert("Error! " + error.message));
         // });
+
+
+        // Loading bar functions
+function showLoadingBar(show) {
+    document.getElementById('loadingBar').style.display = show ? 'flex' : 'none';
+}
+
+// Message box functions
+function showMessageBox(msg, show, type) {
+    const box = document.getElementById('messageBox');
+    box.innerText = msg;
+    box.className = '';
+    if (type === 'success') box.classList.add('success');
+    if (type === 'error') box.classList.add('error');
+    box.style.display = show ? 'block' : 'none';
+    if (show) {
+        setTimeout(() => { box.style.display = 'none'; }, 3000);
+    }
+}
     </script>
 </body>
 
